@@ -27,7 +27,7 @@ class injection(object):
                                    None,
                                    0,
                                    self.h_loadlib,
-                                   self.arg_address,
+                                   self.arg_adress,
                                    0,
                                    byref(self.thread_id)):
             print "[*] Ahg! I failed, good bye (:"
