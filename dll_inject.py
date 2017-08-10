@@ -11,7 +11,7 @@ class injection(object):
     def open_process(self):
         self.h_process = kernel32.OpenProcess( PROCESS_ALL_ACCESS, False, int(self.pid) )
         if not self.h_process:
-            print "An error with PID: {}".format(self.pid)
+            print "PID seems wrong: {}".format(self.pid)
             sys.exit()
     def get_alloc(self):
         self.open_process()
@@ -30,7 +30,7 @@ class injection(object):
                                    self.arg_address,
                                    0,
                                    byref(self.thread_id)):
-            print "[*] Failed to inject the DLL. Exiting."
+            print "[*] Ahg! I failed, good bye (:"
             sys.exit(0)
 
         print "[*] Remote thread with ID 0x%08x created." % thread_id.value
