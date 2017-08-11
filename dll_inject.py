@@ -33,7 +33,7 @@ class injection(object):
             print "[*] Ahg! I failed, good bye (:"
             sys.exit(0)
 
-        print "[*] Remote thread with ID 0x%08x created." % thread_id.value
+        print "[*] Remote thread with ID 0x%08x created." % self.thread_id.value
 
     def __call__(self):
         return(self.write_process())
